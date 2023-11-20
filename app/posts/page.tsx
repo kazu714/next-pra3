@@ -6,7 +6,7 @@ export default async function Page(){
     return(
         <>
             投稿一覧
-            {posts.rows.map((post) => {
+            {posts && posts.rows.map((post) => {
                 return(
                     <div key={post.id}>
                         id:{post.id} <br />

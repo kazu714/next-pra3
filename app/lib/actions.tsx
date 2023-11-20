@@ -1,7 +1,7 @@
 "use server"
 import {sql} from "@vercel/postgres"
 
-export async function createPost(prevState,formData){
+export async function createPost(prevState:null,formData:FormData){
     const content = formData.get("content")
     try{
         console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
@@ -11,7 +11,7 @@ export async function createPost(prevState,formData){
     }
 }
 
-export async function updatePost(id,formData){
+export async function updatePost(id:string,formData:FormData){
     const content = formData.get("content")
     try{
         console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")

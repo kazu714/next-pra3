@@ -11,7 +11,7 @@ export async function fetchPosts(){
     }
 }
 
-export async function fetchPost(id){
+export async function fetchPost(id:string){
     try{
         const post = await sql`select * from post where id = ${id}`
         console.log(post)

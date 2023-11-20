@@ -3,7 +3,7 @@ import { fetchPost } from "@/app/lib/data"
 import {updatePost} from "@/app/lib/actions"
 
 
-export default async function Page({params}){
+export default async function Page({params}:{params:{id:string}}){
     console.log(params,"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb")
     const post = await fetchPost(params.id)
 
@@ -13,7 +13,8 @@ export default async function Page({params}){
         <div>
             編集
             <form action={updatePostById}>
-                <input type="text" name="content" defaultValue={post.rows[0].content}/>
+                
+                {post && <input type="text" name="content" defaultValue={post.rows[0].content}/>}
                 <button type="submit">変更する</button>
             </form>
         </div>

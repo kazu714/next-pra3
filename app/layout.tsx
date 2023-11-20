@@ -21,7 +21,8 @@ export default function RootLayout({
       <div>
         <Link href="/">ホーム</Link>　
         <Link href="/posts">投稿一覧ページ</Link>　
-        <Link href="/posts/create">投稿作成ページ</Link>
+        <Link href="/posts/create">投稿作成ページ</Link>　
+        <Link href="/posts/1/edit">投稿編集ページ</Link>
       </div>
         {children}
       </body>

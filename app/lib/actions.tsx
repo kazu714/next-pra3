@@ -2,7 +2,7 @@
 import {sql} from "@vercel/postgres"
 
 export async function createPost(prevState:null,formData:FormData){
-    const content = formData.get("content")
+    const content = String(formData.get("content"))
     try{
         console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
         sql`insert into post (content) values (${content})`
@@ -12,7 +12,7 @@ export async function createPost(prevState:null,formData:FormData){
 }
 
 export async function updatePost(id:string,formData:FormData){
-    const content = formData.get("content")
+    const content = String(formData.get("content"))
     try{
         console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
         sql`update post set content = ${content} where id = ${id}`

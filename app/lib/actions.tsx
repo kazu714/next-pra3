@@ -21,7 +21,7 @@ export async function createPost(prevState:State,formData:FormData){
             message: "aaa",
         }
     }
-    redirect('/dashboard/invoices');
+    redirect('/posts');
 }
 
 export async function updatePost(id:string,formData:FormData){
@@ -32,4 +32,5 @@ export async function updatePost(id:string,formData:FormData){
     }catch{
         console.log("エラーだよーーーーーーーーーーーーーーーーーーーーーー")
     }
+    redirect('/posts');
 }

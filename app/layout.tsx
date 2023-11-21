@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
       <div>
-        <Link href="/">ホーム</Link>　
+        <Link href="/" className=''>ホーム</Link>　
         <Link href="/posts">投稿一覧ページ</Link>　
         <Link href="/posts/create">投稿作成ページ</Link>　
         <Link href="/posts/1/edit">投稿編集ページ</Link>

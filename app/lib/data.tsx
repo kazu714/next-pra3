@@ -21,3 +21,15 @@ export async function fetchPost(id:string){
         console.log("エラーだよーーーーーーーーーーーーーーーーーーーー")
     }
 }
+
+export async function fetchPostsByQuery(query:string){
+    unstable_noStore()
+    console.log(query,"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
+    try{
+        const post = await sql`select * from post where content ILIKE ${`%${query}%`}`
+        console.log(post,"ポストーーーーーーーーーーーーー")
+        return post
+    }catch(error){
+        console.log("エラーだよーーーーーーーーーーーーーーーーーーーー")
+    }
+}

@@ -4,7 +4,7 @@ import { useFormState } from "react-dom"
 import {createPost} from "@/app/lib/actions"
 
 export default function Page() {
-    const initialState = {}
+    const initialState = {message:"",errors: {}}
     const [state, dispach] = useFormState(createPost,initialState)
     return(
         <div>
